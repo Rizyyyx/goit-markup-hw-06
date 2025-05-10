@@ -313,6 +313,7 @@ a {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #434455;
+  font-style: normal;
 }
 
 .icons-list-mobile-menu {
@@ -354,15 +355,67 @@ a {
 /*  main */
 
 .title {
-  max-width: 100%;
-  padding: 112px 20px 112px 20px;
-  background-color: #2e2f42;
   background-image: linear-gradient(
       to bottom,
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/office_mobile.jpg);
+    url("../images/office_mobile.jpg");
+}
+@media (min-resolution: 2x) {
+  .title {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/office_mobile@2x.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/office_tablet.jpg);
+  }
+
+  @media (min-resolution: 2x) {
+    .title {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/office_tablet@2x.jpg);
+    }
+  }
+}
+@media screen and (min-width: 1158px) {
+  .title {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/office.jpg);
+  }
+
+  @media (min-resolution: 2x) {
+    .title {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/office@2x.jpg);
+    }
+  }
+}
+
+.title {
+  max-width: 100%;
+  padding: 112px 20px 112px 20px;
+  background-color: #2e2f42;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -399,15 +452,6 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .title {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/office_tablet.jpg);
-  }
-
   .title-text {
     margin: 0 auto 36px;
     font-size: 56px;
@@ -425,12 +469,6 @@ a {
 
 @media screen and (min-width: 1158px) {
   .title {
-    background-image: linear-gradient(
-        to bottom,
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/office.jpg);
     padding: 188px 0;
     background-color: #2e2f42;
   }
@@ -503,7 +541,7 @@ a {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 72px;
+    gap: 72px 24px;
     width: 100%;
   }
 
@@ -937,15 +975,20 @@ a {
 
   .container-footer {
     flex-direction: row;
-    justify-content: space-between;
     align-items: flex-start;
     padding: 0 40px;
-    gap: 40px;
     text-align: left;
   }
 
   .footer-logo-container {
     align-items: flex-start;
+    margin-right: 24px;
+    margin-bottom: 72px;
+    margin-left: 108px;
+  }
+
+  .button-input {
+    margin-left: 108px;
   }
 
   .form-input {
@@ -994,6 +1037,17 @@ a {
   .footer-input::placeholder {
     color: #ffffff;
   }
+
+  .footer-logo-container {
+    justify-content: space-between;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+  }
+
+  .button-input {
+    margin-left: 0;
+  }
 }
 
 .backdrop {
@@ -1035,7 +1089,7 @@ a {
   background: #fcfcfc;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
 }
 
 .backdrop:not(.is-open) .modal {
@@ -1234,7 +1288,7 @@ input:checked + .label-checkbox > .privacy-checkbox {
   .modal {
     width: 408px;
     min-height: 584px;
-    padding-right: 24px;
+    padding: 72px 24px 24px 24px;
   }
   .textarea-modal {
     width: 360px;
