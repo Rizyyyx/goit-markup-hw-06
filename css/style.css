@@ -414,7 +414,7 @@ a {
 
 .title {
   max-width: 100%;
-  padding: 112px 20px 112px 20px;
+  padding: 72px 0;
   background-color: #2e2f42;
   background-position: center;
   background-repeat: no-repeat;
@@ -431,6 +431,7 @@ a {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 216px;
 }
 
 .title-button {
@@ -456,6 +457,7 @@ a {
     margin: 0 auto 36px;
     font-size: 56px;
     line-height: 1.07;
+    max-width: 496px;
   }
 
   .title-button {
@@ -546,7 +548,7 @@ a {
   }
 
   .main-item {
-    flex-basis: calc((100% - 72px) / 2);
+    flex-basis: calc((100% - 24px) / 2);
     text-align: center;
   }
 
@@ -610,6 +612,7 @@ a {
   flex-direction: column;
   justify-content: center;
   gap: 72px;
+  align-items: center;
 }
 
 .team-title {
@@ -909,8 +912,8 @@ a {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 100%;
-  max-width: 320px;
+  /* width: 100%; */
+  /* max-width: 320px; */
   align-items: center;
 }
 
@@ -974,21 +977,23 @@ a {
   }
 
   .container-footer {
+    width: 584px;
     flex-direction: row;
     align-items: flex-start;
-    padding: 0 40px;
+    /* padding: 0 40px; */
     text-align: left;
+    gap: 72px 24px;
   }
 
   .footer-logo-container {
     align-items: flex-start;
-    margin-right: 24px;
-    margin-bottom: 72px;
-    margin-left: 108px;
+    /* margin-right: 24px; */
+    /* margin-bottom: 72px; */
+    /* margin-left: 108px; */
   }
 
   .button-input {
-    margin-left: 108px;
+    /* margin-left: 108px; */
   }
 
   .form-input {
@@ -1004,8 +1009,11 @@ a {
 @media screen and (min-width: 1158px) {
   .container-footer {
     align-items: baseline;
+    gap: unset;
   }
-
+  .footer-icon-container {
+    margin-right: 80px;
+  }
   .footer-logo-container {
     margin-right: 120px;
   }
